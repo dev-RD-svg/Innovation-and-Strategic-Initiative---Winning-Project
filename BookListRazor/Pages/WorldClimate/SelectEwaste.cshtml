@@ -1,0 +1,129 @@
+﻿@page
+@model BookListRazor.Pages.BookList.SelectEwasteModel
+
+<h2 class="text-info">Donate for better world tomorrow</h2>
+<br />
+
+<div class=" border container" style="padding: 30px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label>Choose items and quantity </label>
+            </div>
+        </div>
+
+        <div class="form-group row stone1">
+            <div>
+                <div id="button" class="laptopewaste">
+                    <div class="cheesesandwich1">
+                        <h2 class="cheesesandwich2">Laptop</h2>
+                    </div>
+                    <div class="img-overlay">
+                        <label class="label label-success">Quantity: </label>
+                        <div>
+                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                            <input type="text" id="Laptop" name="Laptop" value="0" />
+                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row stone1">
+            <div>
+                <div id="button" class="mobileewaste">
+                    <div class="cheesesandwich1">
+                        <h2 class="cheesesandwich2">Mobile</h2>
+                    </div>
+                    <div class="img-overlay">
+                        <label class="label label-success">Quantity: </label>
+                        <div>
+                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                            <input type="text" id="Mobile" name="Mobile" value="0" />
+                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="form-group row stone1">
+                <div>
+                    <div id="button" class="eggcheesesandwich">
+                        <div class="cheesesandwich1">
+                            <h2 class="cheesesandwich2">xyz</h2>
+                        </div>
+                        <div class="img-overlay">
+                            <label class="label label-success">Quantity: </label>
+                            <div>
+                                <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                <input type="text" id="xyz" name="xyz" value="0" />
+                                <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group row stone1">
+                <div>
+                    <div id="button" class="eggcheesesandwich">
+                        <div class="cheesesandwich1">
+                            <h2 class="cheesesandwich2">abc</h2>
+                        </div>
+                        <div class="img-overlay">
+                            <label class="label label-success">Quantity: </label>
+                            <div>
+                                <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                <input type="text" id="abc" name="abc" value="0" />
+                                <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+
+
+        <div class="col-12 p-3 mt-3">
+            <form method="post">
+                @if (Model.Persons.Count() > 0)
+                {@*<label asp-for="Books.FirstOrDefault().Id"></label>*@
+                @foreach (var item in Model.Persons)
+                {
+                    if (item.Id == Model.Persons.OrderByDescending(y => y.Id).Select(x => x.Id).FirstOrDefault())
+                    {
+                        <div class="col-3" style="margin-left: -36px;">
+                        <button asp-page-handler="Submit" asp-route-id="@item.Id" class="btn btn-success form-control" onclick="return ">Donate</button> @*confirm('Please click ok to donate')*@
+                            </div>
+                    }
+                }
+            }
+            else
+            {
+                @*<p>Nothing available!</p>*@
+            }
+            </form>
+        </div>
+    </form>
+    <div class="col-3 offset-9">
+        <a href ="https://www.outofuse.com/en/reuse/" target="_blank" class="">Multiplier source</a> @*text-white*@
+        @*C:\Users\randas\Documents\Book List Project\BookListRazor\BookListRazor\Pages\WorldClimate\ResearchLinks.cshtml*@
+    </div>
+</div>
+@section Styles{
+    <link href="~/css/SelectEwaste.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+}
+
+@section Scriptsjs{
+    <script src="~/js/FoodCalculator.js"></script>
+}
+@section Scripts{
+    <partial FName="_ValidationScriptsPartial" />
+}
+<br />
+<br />
+<br />
+

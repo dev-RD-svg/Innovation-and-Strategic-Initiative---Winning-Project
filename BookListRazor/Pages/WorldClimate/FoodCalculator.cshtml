@@ -1,0 +1,254 @@
+﻿@page
+@model BookListRazor.Pages.FoodCalculatorModel
+    <style>
+        h1 {
+            font-weight: 400;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .neon {
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+        }
+    </style>
+    <div class="container"  style="align-content:flex-end ; ">
+        <h1 class="neon display-4 text-monospace display-1">Consider Food For Thought</h1> 
+        <a class="nav-link text-light offset-1" style="font-weight:200" asp-area="" asp-page="/WorldClimate/FoodStats">Check your food Stats here!</a>
+    </div>
+
+    <div class="container" style="padding-top:10px;padding-left:100px;background-color: transparent;">
+        <div class="container" hidden style="align-content:flex-end">
+            <h1 class="neon display-4 text-monospace ">Consider Food For Thought</h1><br />
+            <a class="nav-link text-white " asp-area="" asp-page="/WorldClimate/FoodStats">Check your food Stats here!</a>
+        </div>
+        @*<div class="text-center">
+                <h1 class="neon display-4 text-monospace ">Consider Food For Thought</h1><br />
+            </div>*@
+        <form method="post">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        @*<div class="row stone">
+                            <label class="btn btn-light" hidden>1. What did you eat in your first Meal?</label>
+                        </div>*@
+                        <div class="form-group row stone1">
+                            <div>
+                                <div id="button" class="cheesesandwich">
+                                    <div class="cheesesandwich1">
+                                        <h2 class="cheesesandwich2">Cheese-Sandwich</h2>
+                                    </div>
+                                    <div class="img-overlay">
+                                        <label class="label label-success">Quantity: </label>
+                                        <div>
+                                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                            <input type="text" id="cheesesandwich" name="cheesesandwich" value="0" />
+                                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @*<div class="stone">
+                                    <label class="label label-info">Quantity: </label>
+                                    <div class="stone2">
+                                        <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                        <input type="text" id="firstMeal" name="firstMeal" value="0" autocomplete="on" />
+                                        <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                    </div>
+                                </div>*@
+                        </div>
+                        <div class="form-group row stone1">
+                            <div>
+                                <div id="button" class="eggcheesesandwich">
+                                    <div class="cheesesandwich1">
+                                        <h2 class="cheesesandwich2">Egg Cheese-Sandwich</h2>
+                                    </div>
+                                    <div class="img-overlay">
+                                        <label class="label label-success">Quantity: </label>
+                                        <div>
+                                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                            <input type="text" id="eggcheesesandwich" name="eggcheesesandwich" value="0" />
+                                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row stone1">
+                            <div>
+                                <div id="button" class="chickensoup">
+                                    <div class="cheesesandwich1">
+                                        <h2 class="cheesesandwich2">Chicken Soup</h2>
+                                    </div>
+                                    <div class="img-overlay">
+                                        <label class="label label-success">Quantity: </label>
+                                        <div>
+                                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                            <input type="text" id="chickensoup" name="chickensoup" value="0" />
+                                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        @*<div class="row">
+                            <label class="" style="font-size:20px;" hidden>What did you eat in your Meal?</label>
+                        </div>*@
+                        <div class="form-group row stone1">
+                            <div>
+                                <div id="button" class="eggRice">
+                                    <div class="cheesesandwich1">
+                                        <h2 class="cheesesandwich2">Egg Rice</h2>
+                                    </div>
+                                    <div class="img-overlay">
+                                        <label class="label label-success">Quantity: </label>
+                                        <div>
+                                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                            <input type="text" id="eggRice" name="eggRice" value="0" />
+                                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row stone1">
+                            <div>
+                                <div id="button" class="chickencheesesandwich">
+                                    <div class="cheesesandwich1">
+                                        <h2 class="cheesesandwich2">Chicken Cheese Sandwich</h2>
+                                    </div>
+                                    <div class="img-overlay">
+                                        <label class="label label-success">Quantity: </label>
+                                        <div>
+                                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                            <input type="text" id="chickencheesesandwich" name="chickencheesesandwich" value="0" />
+                                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row stone1">
+                            <div>
+                                <div id="button" class="chickensandwich">
+                                    <div class="cheesesandwich1">
+                                        <h2 class="cheesesandwich2">Chicken-Sandwich</h2>
+                                    </div>
+                                    <div class="img-overlay">
+                                        <label class="label label-success">Quantity: </label>
+                                        <div>
+                                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                            <input type="text" id="chickensandwich" name="chickensandwich" value="0" />
+                                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-4">
+                    <div class="form-group">
+                        @*<div class="row stone">
+                            <label class="btn btn-light" hidden>3. What did you eat in your third Meal?</label>
+                        </div>*@
+                        <div class="form-group row stone1">
+                            <div>
+                                <div id="button" class="chickensteak">
+                                    <div class="cheesesandwich1">
+                                        <h2 class="cheesesandwich2">Chicken Steak in Red Wine</h2>
+                                    </div>
+                                    <div class="img-overlay">
+                                        <label class="label label-success">Quantity: </label>
+                                        <div>
+                                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                            <input type="text" id="chickensteak" name="chickensteak" value="0" />
+                                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row stone1">
+                            <div>
+                                <div id="button" class="vegrice">
+                                    <div class="cheesesandwich1">
+                                        <h2 class="cheesesandwich2">Veg Rice</h2>
+                                    </div>
+                                    <div class="img-overlay">
+                                        <label class="label label-success">Quantity: </label>
+                                        <div>
+                                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                            <input type="text" id="vegrice" name="vegrice" value="0" />
+                                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row stone1">
+                            <div>
+                                <div id="button" class="milk">
+                                    <div class="cheesesandwich1">
+                                        <h2 class="cheesesandwich2">Milk</h2>
+                                    </div>
+                                    <div class="img-overlay">
+                                        <label class="label label-success">Quantity: </label>
+                                        <div>
+                                            <span class="minus glyphicon glyphicon-minus glyphico"></span>
+                                            <input type="text" id="milk" name="milk" value="0" />
+                                            <span class="plus  glyphicon glyphicon-plus glyphico"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container meal">
+                <div class="col-3 offset-4 ">
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" id="calculate" asp-route-data="foo" asp-page-handler="SellProduct" class="btn btn-success text-white ">Calculate</button>
+                    @*onclick="document.getElementById('firstMeal').value"*@
+                </div>
+            </div>
+            <div class="col-3 offset-4 " style="line-height:5">
+                @{
+                    var tempval = TempData["SumResult"];
+                    @if (tempval == null)
+                    {
+                        @*<span>Check Today's Food C02 for Thought</span> //Never displayed*@
+                    }
+                    else
+                    {
+                        @*<span>Check Today's Food C02 for Thought</span> <br />*@
+                <label class="btn btn-light" Visible="false" id="lbltotal">
+                    Your total Co2 emissions as of <br /> today from food is
+                    <b> @TempData["SumResult"] </b> kg.
+                </label>
+                    }
+                }
+            </div>
+            <br />
+            <br />
+        </form>
+    </div>
+    <br />
+    <br />
+
+    @section Styles{
+        <link href="~/css/FoodCalculator.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    }
+
+    @section Scripts{
+        <script src="~/js/FoodCalculator.js"></script>
+    }
+

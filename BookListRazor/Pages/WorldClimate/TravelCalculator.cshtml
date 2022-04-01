@@ -1,0 +1,138 @@
+﻿@page
+
+@model BookListRazor.Pages.BookList.TravelCategory
+<style>
+    h1 {
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .neon {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+</style>
+@*<body background="https://images.unsplash.com/photo-1581974267369-3f2fe3b4545c">
+
+    </body>*@
+
+<body>
+    <div class="container" style="align-content:flex-end ; ">
+        <h1 class="neon display-4 text-monospace ">Consider travel activity</h1><br />
+        <a class="nav-link text-dark " asp-area="" asp-page="/WorldClimate/TravelStats">Check your travel statistics here!</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="login-form">
+                    <form method="post">
+                        <div class="form-group row">
+                            <div class="col-5">
+                                <label for="exampleInputEmail1">Vehicle Type</label>
+                            </div>
+                            <div class="col-7">
+                                <select asp-for="CategoryId" asp-items="Model.Categories" class="form-control" name="Categories">
+                                    <option value="">Select Category</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-5">
+                                <label for="exampleInputEmail1">Departure Point</label>
+                            </div>
+                            <div class="col-7">
+                                <select asp-for="SubCategoryId" asp-items="Model.Arrival" class="form-control" name="Arrival">
+                                    <option value="">Select Sub Category</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-5">
+                                <label for="exampleInputEmail1">Arrival Point</label>
+                            </div>
+                            <div class="col-7">
+                                <select asp-for="ThirdCategoryId" asp-items="Model.Departure" class="form-control" name="Departure">
+                                    <option value="">Select Third Category</option>
+                                </select>
+                            </div>
+                        </div>
+                        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+                        <button type="submit" id="calculate" name="calculate" asp-route-data="foo" asp-page-handler="SellProduct1" class="btn btn-primary" onclick="GetMessage()">Submit</button>
+
+
+                        <div class="text-center" style="line-height:5">
+                            @{
+                                var tempval = TempData["SumResult"];
+                                @if (tempval == null)
+                                {
+                                    @*<span>Check Today's Travel C02 for Thought</span>*@ //Never displayed
+                                }
+                                else
+                                {
+                                    <label class="form-text text-light" id="lbltotal">
+                                        Your total Co2 emissions from today's travel is
+                                        <b> @TempData["SumResult"] </b> kg.
+                                    </label>
+                                }
+                            }
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+@section scripts{
+    <script>
+        document.getElementById('CategoryId').addEventListener('change', (e) => {
+            document.getElementById('SubCategoryId').innerHTML = "<option value=''>Select SubCategory</option>";
+            fetch(`?handler=SubCategories&categoryId=${e.target.value}`)
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    Array.prototype.forEach.call(data, function (item, i) {
+                        document.getElementById('SubCategoryId').innerHTML += `<option value="${item.subCategoryId}">${item.subCategoryName}</option>`
+                    });
+                });
+        });
+
+        document.getElementById('SubCategoryId').addEventListener('change', (e) => {
+            document.getElementById('ThirdCategoryId').innerHTML = "<option value=''>Select ThirdCategory</option>";
+            fetch(`?handler=ThirdCategories&categoryId=${e.target.value}`)
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    Array.prototype.forEach.call(data, function (item, i) {
+                        document.getElementById('ThirdCategoryId').innerHTML += `<option value="${item.thirdCategoryId}">${item.thirdCategoryName}</option>`
+                    });
+                });
+        });
+
+        $('#calculate').click(function () {
+            fetch(`?handler=ThirdCategories&categoryId=${e.target.value}`)
+        });
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+                        // $(".login-action").click(function(){
+                        //   alert("clicked.");
+                        // });
+    </script>
+}
+
+@section Styles{
+    <link href="~/css/TravelCalculator.css" rel="stylesheet" />
+}

@@ -1,0 +1,152 @@
+﻿@page
+@model BookListRazor.Pages.BookList.IndexModel
+
+<div class="container row p-0 m-0">
+    <div class="col-6">
+        <h2 class="text-info">Summary</h2>
+    </div>
+    <div class="col-3">
+        @*<a asp-page="Create" class="btn btn-info form-control text-white">Create new book</a>
+            </div>
+            <div class="col-3">
+                <a asp-page="Upsert" class="btn btn-info form-control text-white">Add(upsert) new book</a>
+            </div>*@
+
+        <div class="col-12 p-3 mt-3">
+            <form method="post">
+                @if (Model.Books.Count() > 0)
+                {
+                    <table class="table table-striped border">
+                        <tr class="table-secondary">
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().Id"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().FName"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().LName"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().Emailid"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().ContactNo"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().line1"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().line2"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().city"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().state"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Books.FirstOrDefault().Pincode"></label>
+                            </th>
+                            @*<th>
+
+                                </th>*@
+                        </tr>
+                        @foreach (var item in Model.Books)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(m => item.Id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.FName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.LName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.Emailid)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.ContactNo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.line1)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.line2)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.city)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.state)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.Pincode)
+                                </td>
+                                @*<td>
+                                        <button asp-page-handler="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
+                                        <a asp-page="Edit" asp-route-id="@item.Id" button class="btn btn-success btn-sm">Edit222</a>
+                                    </td>*@
+                            </tr>
+                        }
+
+                    </table>
+                }
+                else
+                {
+                    @*<p>Nothing available!</p>*@
+                }
+            </form>
+        </div>
+
+
+
+
+        <div class="col-12 p-3 mt-3">
+            <form method="post">
+                @if (Model.SelectEwastes.Count() > 0)
+                {@*<label asp-for="Books.FirstOrDefault().Id"></label>*@
+
+
+
+                @foreach (var item in Model.SelectEwastes)
+                {
+                    if (item.Id == Model.SelectEwastes.Count())
+                    {
+
+                        <div>
+                            <h3>You have saved @Html.DisplayFor(m => item.Co2Footprint) Co2 and Contributed in making this world a better place for tomorrow. Thank you!</h3>
+                        </div>
+                    }
+                }
+            }
+            else
+            {
+                @*<p>Nothing available!</p>*@
+            }
+
+            </form>
+        </div>
+
+
+
+        <!--<div class="col-12" style="text-align:center">
+        <br />
+        <span class="h3 text-info">OR</span> <br /><br />-->
+        @*</div>
+            <div class="col-12 border p-3">
+                <table id="DT_load" class="table table-striped table-bordered" style="width:100%;">
+                    <thead>
+                    <th>Name111</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th> </th>
+                    </th>
+                </table>
+            </div>*@
+    </div>
+    @section Scripts{
+        @*<script src="~/js/Booklist.js"></script>*@
+    }

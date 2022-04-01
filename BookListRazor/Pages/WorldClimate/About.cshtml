@@ -1,0 +1,117 @@
+﻿@page
+@model AboutModel
+
+    <style>
+        body {
+        }
+
+        h2 {
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .neon {
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+        }
+        
+        p{
+/*            font-displa*/
+        }
+        a {
+            color: #86bc24;
+            margin-top: 5px;
+        }
+    </style>
+
+
+<h2 class=" neon ">Team HACKuna Matata</h2>
+
+<p class="text-light">The ladies of HACKuna Matata are campus hires of 2019 batch! Not just young and smart, but they dream together to make anything possible through code! They believe that through persistent hard-work with endurance, together they can be resilient and stand strong against any challenge. This is the motive they thrive on which made this application a success!</p>
+<p class="text-light">Together they strive to make the future of Deloitte's sustainability possile through the event <i>WinC Girl Hack It!</i> hackathon event. Grateful for the opportunity, together they succesfully put up their solution through research, UX/UI, planning functionalities, implementation through code and executing our ideas.</p>
+
+<p class="text-light">Each of the members have a short message for the dear audience. Scroll below to see what they have to say and to know a little about each one of them!</p>
+
+<table>
+    <tbody>
+
+        <tr>
+            <th>
+                <div class="ranishacard">
+                    <p class="ranishacardpara text-light">
+                        <i>
+                            "As a software developer myself, I have been extremely excited to participate in Hackathons like such.
+                            With a project level experience in Angular, API, ASP.NET C#, ASP.net MVC (in Entity framework using Visual studio, SSRS, SSMS).
+                            <br /><br />I'm thankful to WinC! to allow me the opportunity to put my skillsets to use for such a noble cause!
+                            <br /><br />I'm pretty sure you're stunned with our results!"
+                        </i>
+                    </p>
+                </div>
+            </th>
+            <td><img src="~/img/Team/Shivangi Card.png" style="height: 450px; width: 600px   " /></td>
+
+        </tr>
+
+        <tr>
+            <td><img src="~/img/Team/Madhumita Card.png" style="height: 450px; width: 600px   " /></td>
+            <th>
+                <div class="ranishacard">
+                    <p class="ranishacardpara text-light">
+                        <i>
+                            "As a QA engineer, I have worked in different domains like investments and wealth management and currently I am working on Landlord management system. I am good at understanding the user-view-point, usability testing, understanding how functionality affects user’s life. <br /> This is a huge opportunity to bring all those skills to development. And I thank Deloitte and WinC community for providing such a great learning platform.
+                            <br /><br />P.S. Let me save your valuable time: do not try to look for bugs, cuz you wouldn't find any! ;)"
+                        </i>
+                    </p>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="ranishacard">
+                    <p class="ranishacardpara text-light" style="">
+                        <i>
+                            "This is my second time at <b>WinC Girl Hack It!</b> Hackathon event.
+                            With a project level experience in ASP.NET C#, ASP.net MVC (in Entity framework and LLBL Gen using Visual studio, SSRS, SSMS), I also have interests Design, UI/UX.
+                            <br /><br />I'm extremely glad that my firm has the provision of such events where I can showcase my skills outside the primary scope.
+                            <br /><br /> Now you know most of the work here is good-looking through planning and  strategizing by you know who! :)"
+                        </i>
+                    </p>
+                </div>
+            </th>
+            <td><img src="~/img/Team/Ranisha Card.png" style="height: 450px; width: 600px " /></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+<hr />
+<div>
+    @*<img src="~/img/Teamy/Ranisha Card.png" style="height: 250px; width: 350px " />*@
+    <video width="350" controls>
+        <source src="~/vid/Team/madhumita.mp4" type="video/mp4">
+    </video> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <video width="350" controls>
+        <source src="~/vid/Team/shivangi.mp4" type="video/mp4">
+    </video>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <video width="350" controls>
+        <source src="~/vid/Team/ranisha.mp4" type="video/mp4">
+    </video>
+</div>
+@*<div class="form-group row"></div>*@
+<div class="col-3 offset-9">
+    <a asp-page="/WorldClimate/ResearchLinks" class="">Our Research Links</a> @*text-white*@
+    @*C:\Users\randas\Documents\Book List Project\BookListRazor\BookListRazor\Pages\WorldClimate\ResearchLinks.cshtml*@
+</div>
+@*</div>*@
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+@section Styles{
+    <link href="~/css/About.css" rel="stylesheet" />
+    @*<link href="~/css/site.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+}

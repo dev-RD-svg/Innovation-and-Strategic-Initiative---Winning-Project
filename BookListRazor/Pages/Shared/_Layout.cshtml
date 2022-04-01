@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+
+    <title>@*@ViewData["Title"] -*@ WorldClimate</title>
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+    @*<link rel="shortcut icon" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                @*<a class="navbar-brand" asp-area="" asp-page="/Index">BookListRazor</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>*@
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a asp-page="/Index">
+                                <img src="~/img/Deloitte/white deloitte d.jpg" class="img-center" style="width: 50px; height: 50px;" />Home
+                            </a>
+                        </li> &nbsp;&nbsp;&nbsp;
+                        <li class="nav-item">
+                            <a asp-page="/WorldClimate/Ewaste">
+                                <img src="~/img/Logo/Logo 1.png" class="img-center" style="transform: rotate(-20deg); width: 35px; height: 50px;" />Donate
+                            </a>
+                        </li>&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item">
+                            <a asp-page="/WorldClimate/FoodCalculator">
+                                <img src="~/img/Home/Icons/food.jpg" class="img-center" style="width: 50px; height: 50px; object-fit: inherit" />Food
+                            </a>
+                        </li>
+                        @*<li class="nav-item">
+                            <a asp-page="/WorldClimate/CascadingDropdownsModel">
+                                <img src="~/img/Home/Icons/travel.jpg" class="img-center" style=" width: 50px; height: 50px;" />Travel
+                            </a>
+                        </li>*@
+                        <li class="nav-item">
+                            <a asp-page="/WorldClimate/TravelCalculator">
+                                <img src="~/img/Home/Icons/travel.jpg" class="img-center" style=" width: 50px; height: 50px;" />Travel
+                            </a>
+                        </li>
+                        @*<span class="glyphicon glyphicon-road"></span>
+                            <span class="glyphicon glyphicon-road"></span>
+                            <span class="glyphicon glyphicon-road"></span>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/WorldClimate/Index">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/WorldClimate/Ewaste">Donate</a>
+                            </li>*@
+                        @*<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/WorldClimate/FoodCalculator">Food</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/WorldClimate/TravelCalculator">Travel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/WorldClimate/ImageRepository">ImageRepository</a>
+                        </li>*@
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="footer text-muted">
+            <div class="container">
+                &copy; 2021 Winc Girl! Hack It - Hackuna Matata - <a asp-area="" asp-page="/Privacy">About the Team</a>
+            </div>
+        </footer>*@
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 Winc Girl! Hack It - HACKuna Matata - <a asp-area="" asp-page="/WorldClimate/About">About the Team</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+    @RenderSection("Styles", required: false)
+    @RenderSection("Scriptsjs", required: false)
+
+</body>
+</html>

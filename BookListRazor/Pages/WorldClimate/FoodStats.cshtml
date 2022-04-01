@@ -1,0 +1,58 @@
+﻿@page
+@*@model BookListRazor.Pages.FoodCalculatorModel*@
+<style>
+body { background-image: url("https://media.istockphoto.com/photos/super-food-or-vegetarian-food-concept-picture-id1026051248?k=6&m=1026051248&s=612x612&w=0&h=L0OI0AX2ZtE5dGtEZ75vobhzCSpmhNAfOMEg37bUTGI=");
+       /*        background-image: url("../../img/Deloitte/infrastructure/DEB_8923.jpg");*/ background-repeat: no-repeat, repeat; background-position: center; /* Center the image */ background-size: cover; /* Resize the background image to cover the entire container */ /*    padding-top: 50px;*/ }
+    h1 {
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .neon {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+</style>
+
+
+<h1 class="neon text-white">Food Statistics</h1>
+<br />
+
+<div class=" container" style="padding: 30px">
+    <div class="display-4">
+        <table  style="background-color:white; opacity:0.8;" >
+            @*<thead>
+                    <tr><th></th></tr>
+                    <tr><th></th></tr>
+                    <tr><th></th></tr>
+                </thead>*@
+            <tbody>
+                <tr>
+                    <td><img src="~/img/FoodPieChart/1-CheeseSandwich.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/2-EggRice.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/3-ChickenSandwich.png" style="height: 250px; width: 350px " /></td>
+                </tr>
+                <tr>
+                    <td><img src="~/img/FoodPieChart/4-EggCheeseSandwich.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/5-ChickenCheeseSandwich.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/6-VegRice.png" style="height: 250px; width: 350px " /></td>
+                </tr>
+                <tr>
+                    <td><img src="~/img/FoodPieChart/7-ChickenSoup.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/8-ChickenSteakInRedWine.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/9-Milk.png" style="height: 250px; width: 350px " /></td>
+                </tr>
+                <tr><td></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-3 offset-9">
+            <a asp-page="/WorldClimate/FoodCalculator" class="btn btn-success form-control">Back</a> @*text-white*@
+            @*C:\Users\randas\Documents\Book List Project\BookListRazor\BookListRazor\Pages\WorldClimate\FoodCalculator.cshtml*@
+        </div>
+    </div>
+</div>
+

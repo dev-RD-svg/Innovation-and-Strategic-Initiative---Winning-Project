@@ -1,0 +1,355 @@
+﻿@page
+@model BookListRazor.Pages.BookList.SurveyEwasteModel
+
+<br />
+<h2 class="text-info">Let's check your Awareness!</h2>
+<br />
+
+<div class=" border container" style="padding: 30px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        @*--------------------Question1*@
+
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"><strong>1. Which of the following element(s) is/are cause of E-waste?</strong> </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q101" name="Question1" value="1">
+                <label asp-for="SurveyEwaste.option">Lead</label>
+            </div>
+            @*@Html.RadioButtonFor(model => model.gender, "Female", new { @checked = true })*@
+
+            <div class="col-6">
+                <input type="radio" id="Q1O2" name="Question1" value="2">
+                <label asp-for="SurveyEwaste.option">Cadmium</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q1O3" name="Question1" value="3">
+                <label asp-for="SurveyEwaste.option">Beryllium, or Brominates flame retardants</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q1O4" name="Question1" value="4">
+                <label asp-for="SurveyEwaste.option">All of the above</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        @*--------------------Question2//2.&nbsp;_______________ can be significantly harmed by landfills.*@
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"><strong>2. Which of the following are the main contributors of the e-waste in the world?</strong></label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q2O1" name="Question2" value="1">
+                <label asp-for="SurveyEwaste.option">Personal computers, telephones, mobile phones, laptops,<br />printers, scanners, photocopiers</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q2O2" name="Question2" value="2">
+                <label asp-for="SurveyEwaste.option">Small household appliances<br />(toasters, coffee makers, irons, hairdryers)</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q2O3" name="Question2" value="3">
+                <label asp-for="SurveyEwaste.option">Refrigerators/freezers, washing machines, dishwashers</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q2O4" name="Question2" value="4">
+                <label asp-for="SurveyEwaste.option">All of the above</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        @*--------------------Question3*@
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"> <strong>3. An estimated loss of mercury every year?</strong></label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q3O1" name="Question3" value="1">
+                <label asp-for="SurveyEwaste.option">50 tonnes</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q3O2" name="Question3" value="2">
+                <label asp-for="SurveyEwaste.option">10 tonnes</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q3O3" name="Question3" value="3">
+                <label asp-for="SurveyEwaste.option">60 tonnes</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q3O4" name="Question3" value="4">
+                <label asp-for="SurveyEwaste.option">20 tonnes</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        @*--------------------Question4*@
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"><strong>4.What was agreed to in the "Paris Agreement" that came out of COP-21, held in Paris in 2015?</strong></label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q4O1" name="Question4" value="1">
+                <label asp-for="SurveyEwaste.option">To protect biodiversity and end the deforestation <br />of the world’s rainforests</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q4O2" name="Question4" value="2">
+                <label asp-for="SurveyEwaste.option">To keep global temperature rise well below 2℃ <br />pre-industrial levels and to pursue a path to limit warming to 1.5℃</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q4O3" name="Question4" value="3">
+                <label asp-for="SurveyEwaste.option">To limit sea level rise to 3 feet above current levels</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q4O4" name="Question4" value="4">
+                <label asp-for="SurveyEwaste.option">To pursue a goal of 100% clean, renewable energy</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        @*--------------------Question5*@
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"><strong>5. What is the estimated that the annual amount of E-waste will exceed in 2030(in tonnes)? </strong></label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q5O1" name="Question5" value="1">
+                <label asp-for="SurveyEwaste.option">84 million</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q5O2" name="Question5" value="2">
+                <label asp-for="SurveyEwaste.option">40 million</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q5O3" name="Question5" value="3">
+                <label asp-for="SurveyEwaste.option">20 million</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q5O4" name="Question5" value="4">
+                <label asp-for="SurveyEwaste.option">10 million</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        @*--------------------Question6*@
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"><strong>6. Recycling how many laptops is equivalent to saving energy used by 3500 homes in US annually?</strong></label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q6O1" name="Question6" value="1">
+                <label asp-for="SurveyEwaste.option">1 million</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q6O2" name="Question6" value="2">
+                <label asp-for="SurveyEwaste.option">2 million</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q6O3" name="Question6" value="3">
+                <label asp-for="SurveyEwaste.option">3 million</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q6O4" name="Question6" value="4">
+                <label asp-for="SurveyEwaste.option">0.5 million</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        @*--------------------Question7*@
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"><strong>7. Cellphones and other electronic devices contain what all precious metals?</strong> </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q7O1" name="Question7" value="1">
+                <label asp-for="SurveyEwaste.option">Platinum and Silver </label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q7O2" name="Question7" value="2">
+                <label asp-for="SurveyEwaste.option">Gold and Silver</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q7O3" name="Question7" value="3">
+                <label asp-for="SurveyEwaste.option">Gold and Platinum</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q7O4" name="Question7" value="4">
+                <label asp-for="SurveyEwaste.option">Only Gold</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        @*--------------------Question8*@
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"><strong>8. What are Workers on E-Waste sites paid on an average per day?</strong></label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q8O1" name="Question8" value="1">
+                <label asp-for="SurveyEwaste.option">$1.50 </label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q8O2" name="Question8" value="2">
+                <label asp-for="SurveyEwaste.option">$5.00 </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q8O3" name="Question8" value="3">
+                <label asp-for="SurveyEwaste.option">$3.50 </label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q8O4" name="Question8" value="4">
+                <label asp-for="SurveyEwaste.option">$2.00 </label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        @*--------------------Question9*@
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"><strong>9. It takes ____ of fossil fuel, ____  of chemicals, and ____ of water to manufacture one computer and monitor.</strong></label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q9O1" name="Question9" value="1">
+                <label asp-for="SurveyEwaste.option">300lbs, 50lbs, 3 tons </label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q9O2" name="Question9" value="2">
+                <label asp-for="SurveyEwaste.option">200lbs, 40lbs, 2 tons</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q9O3" name="Question9" value="3">
+                <label asp-for="SurveyEwaste.option">530lbs, 48lbs, and 1.5 tons</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q9O4" name="Question9" value="4">
+                <label asp-for="SurveyEwaste.option">400lbs, 20lbs, 1ton</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        @*--------------------Question10*@
+        <div class="form-group row">
+            <div class="col-12">
+                <label asp-for="SurveyEwaste.question"><strong>10. THE CLOCK IS TICKING AS WE SPEAK. _____________ tons of electronic waste has already been thrown out in 2021!</strong></label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.question" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q10O1" name="Question10" value="1">
+                <label asp-for="SurveyEwaste.option">count is exceeding 26 million ALREADY!</label>
+            </div>
+            <div class="col-6">
+                <input type="radio" id="Q10O2" name="Question10" value="2">
+                <label asp-for="SurveyEwaste.option">Freaking 25 million!</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="radio" id="Q10O3" name="Question10" value="3">
+                <label asp-for="SurveyEwaste.option"><br />A 20 MILLION!</label>
+            </div>
+            <div class="col-4">
+                <input type="radio" id="Q10O4" name="Question10" value="4">
+                <label asp-for="SurveyEwaste.option">I think we're doing good this year,<br /> it should be below 10 million!</label>
+            </div>
+            <span asp-validation-for="SurveyEwaste.option" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-12">
+                <label><strong>Hmm, wondering if you got all questions right? We hope so too. Let's move forward.</strong></label>
+                @*<a asp-page="/WorldClimate/Readmore" class="btn btn-outline-success form-control">Read more to find out!</a>*@
+            </div>
+        </div>
+
+
+        @foreach (var item in Model.Persons)
+        {
+            if (item.Id == Model.Persons.Count())
+            {
+                <div class="col-3 offset-5">
+                    <button asp-page-handler="Submit" asp-route-id="@item.Id" class="btn btn-success form-control">Save & Next</button>
+                </div>
+            }
+        }
+        <div class="form-group row">
+            @*<div class="col-3 offset-5">
+                <input type="submit" value="Save & Next" class="btn btn-success form-control" />
+            </div>*@
+            <div class="col-3 offset-5">
+                <a asp-page="/WorldClimate/DonateEwaste" class="btn btn-outline-success form-control">Previous</a> @*text-white*@
+            </div>
+        </div>
+
+        @*}
+        else
+        {
+        <p>Nothing available!</p>
+        }*@
+
+
+
+    </form>
+
+</div>
+
+
+@section Scripts{
+    <partial FName="_ValidationScriptsPartial" />
+}

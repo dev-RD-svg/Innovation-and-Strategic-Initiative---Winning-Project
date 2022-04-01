@@ -1,0 +1,71 @@
+﻿@page
+@*@model BookListRazor.Pages.FoodCalculatorModel*@
+<style>
+    body {
+        background-image: url("https://i.pinimg.com/originals/fe/ce/66/fece66963c414662333f7884a70dbde3.jpg");
+/*        background-image: url("https://cdn.pixabay.com/photo/2019/09/24/16/05/storm-4501645_1280.jpg");*/
+        background-repeat: no-repeat, repeat;
+        background-position: center; /* Center the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        /*    padding-top: 50px;*/
+    }
+    h1 {
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .neon {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+</style>
+
+
+<h1 class="neon text-white">Travel Statistics</h1>
+<br />
+
+<div class="container" style="padding: 30px">
+    <div class="display-4">
+        <table style="">
+            <tbody>
+                <tr>
+                    <td style="background-color:white;opacity:0.7;"><img src="~/img/TravelChart/bar chart.png" style="height: 450px; width: 600px " /></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <table style="margin-left:350px;">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td><img src="~/img/TravelChart/mumbai Railway Map.gif" style="height: 700px; width: 700px; opacity:0.8" /></td>
+                    @*<td><img src="~/img/TravelChart/4-EggCheeseSandwich.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/TravelChart/5-ChickenCheeseSandwich.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/TravelChart/6-VegRice.png" style="height: 250px; width: 350px " /></td>*@
+                </tr>
+                <tr>
+                    @*<td><img src="~/img/TravelChart/7-ChickenSoup.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/TravelChart/8-ChickenSteakInRedWine.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/TravelChart/9-Milk.png" style="height: 250px; width: 350px " /></td>*@
+                </tr>
+                <tr><td></td></tr>
+                @*<tr><td></td></tr>*@
+                @*<tr><td></td></tr>
+                <tr><td></td></tr>*@
+            </tbody>
+        </table>
+        @*<img src="~/img/1-CheeseSandwich.png" style="height: 250px; width: 350px" /> workssss
+        <img src="~/img/Photos/1-CheeseSandwich.png" style="height: 250px; width: 350px " /> workssss
+        <img src="~/img/Photos/1-CheeseSandwich.png" style="height: 250px; width: 350px " /> workssss*@
+    </div>
+
+    <div class="form-group row">
+        <div class="col-3 offset-9">
+            <a asp-page="/WorldClimate/TravelCalculator" class="btn btn-info form-control">Back</a> @*text-white*@
+            @*C:\Users\randas\Documents\Book List Project\BookListRazor\BookListRazor\Pages\WorldClimate\CascadingDropdownsModel.cshtml*@
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,78 @@
+﻿@page
+@model BookListRazor.Pages.BookList.CreateModel
+
+<br/>
+<h2 class="text-info">Create New Book</h2>
+<br/>
+
+<div class=" border container" style="padding: 30px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.FName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.FName"></input>
+            </div>
+            <span asp-validation-for="Book.FName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.LName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.LName"></input>
+            </div>
+            <span asp-validation-for="Book.LName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.Emailid"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.Emailid"></input>
+            </div>
+            <span asp-validation-for="Book.Emailid" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.line1"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.line1"></input>
+            </div>
+            <span asp-validation-for="Book.line1" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.city"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.city"></input>
+            </div>
+            <span asp-validation-for="Book.city" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.state"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Book.state"></input>
+            </div>
+            <span asp-validation-for="Book.state" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to List</a> @*text-white*@
+            </div>
+        </div>
+    </form>
+
+</div>
+@section Scripts{ 
+<partial FName="_ValidationScriptsPartial"/>
+}

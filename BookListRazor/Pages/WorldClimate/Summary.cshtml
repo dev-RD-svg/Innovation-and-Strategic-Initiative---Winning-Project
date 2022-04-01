@@ -1,0 +1,143 @@
+﻿@page
+@model BookListRazor.Pages.BookList.SummaryModel
+
+<body>
+    <div class="col-6">
+        <h2 class="text-info">Summary</h2>
+    </div>
+
+    <div class="container row p-0 m-0">
+
+        @*<div class="container">
+            <img src="~/img/ewaste/Thank you.png" style="width:900px; height:600px;" />
+        </div>*@
+
+
+        <div class="col-4">
+            <div class="col-1 p-3 mt-3">
+                <form method="post">
+                    @if (Model.Persons.Count() > 0)
+                    {
+                        <table class="table table-striped border">
+                            <tr class="table-secondary">
+                                <th hidden>
+                                    <label asp-for="Persons.FirstOrDefault().Id"></label>
+                                </th>
+                                <th>
+                                    <label asp-for="Persons.FirstOrDefault().FName">First Name</label>
+                                </th>
+                                <th>
+                                    <label asp-for="Persons.FirstOrDefault().LName">Last Name</label>
+                                </th>
+                                <th>
+                                    <label asp-for="Persons.FirstOrDefault().Emailid">E-mail</label>
+                                </th>
+                                <th>
+                                    <label asp-for="Persons.FirstOrDefault().ContactNo">Phone</label>
+                                </th>
+                                <th>
+                                    <label asp-for="Persons.FirstOrDefault().line1">Address line 1</label>
+                                </th>
+                                <th>
+                                    <label asp-for="Persons.FirstOrDefault().line2">Address line 2</label>
+                                </th>
+                                <th>
+                                    <label asp-for="Persons.FirstOrDefault().city">City</label>
+                                </th>
+                                <th>
+                                    <label asp-for="Persons.FirstOrDefault().state">State</label>
+                                </th>
+                                <th>
+                                    <label asp-for="Persons.FirstOrDefault().Pincode">Pincode</label>
+                                </th>
+                                @*<th>
+
+                                    </th>*@
+                            </tr>
+                            @foreach (var item in Model.Persons)
+                            {
+                                <tr>
+                                    <td hidden>
+                                        @Html.DisplayFor(m => item.Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.FName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.LName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Emailid)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.ContactNo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.line1)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.line2)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.city)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.state)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Pincode)
+                                    </td>
+                                    @*<td>
+                                            <button asp-page-handler="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
+                                            <a asp-page="Edit" asp-route-id="@item.Id" button class="btn btn-success btn-sm">Edit222</a>
+                                        </td>*@
+                                </tr>
+                            }
+
+                        </table>
+                    }
+                    else
+                    {
+                        @*<p>Nothing available!</p>*@
+                    }
+                </form>
+            </div>
+        </div>
+
+        <div class="col-12 p-3 mt-3">
+            <form method="post">
+                @if (Model.SelectEwastes.Count() > 0)
+                {
+                    @foreach (var item in Model.SelectEwastes)
+                    {
+                        if (item.Id == Model.SelectEwastes.Count())
+                        {
+                            <div>
+                                &nbsp;&nbsp;&nbsp; <label class="btn btn-light text-center" Visible="false" id="lbltotal">
+                                    You have saved <b>@Html.DisplayFor(m => item.Co2Footprint) kg of Co2</b>
+                                    and contributed in making this world a better place for tomorrow.
+                                </label>
+
+                                @*<h3>You have saved @Html.DisplayFor(m => item.Co2Footprint) Co2 and contributed in making this world a better place for tomorrow. Thank you!</h3>*@
+                            </div>
+                        }
+                    }
+                }
+                else
+                {
+                    @*<p>Nothing available!</p>*@
+                }
+
+            </form>
+        </div>
+        <div class="container">
+            <img src="~/img/ewaste/Thank you.png" style="width:900px; height:600px;" />
+        </div>
+    </div>
+</body>
+
+
+
+@section Scripts{
+    @*<script src="~/js/Booklist.js"></script>*@
+}

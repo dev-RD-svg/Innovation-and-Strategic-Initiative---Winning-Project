@@ -1,0 +1,220 @@
+﻿@page
+@model EwasteModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .carousel-item {
+        width: 100%;
+        min-height: 450px;
+        opacity: 0.6;
+        /*        margin-left: 180px;*/
+        background: #777;
+        padding-top: 350px;
+        padding-left: 200px;
+        padding-right: 200px;
+        /*        position:absolute;*/
+        background-position: center;
+        background-size: cover;
+    }
+
+    #carouselheader {
+        /*        position:absolute;*/
+        bottom: 0;
+        right: 0;
+        left: 0;
+        /*        background: forestgreen;*/
+    }
+
+    carousel-control-next:hover {
+        background-color: black;
+        opacity: 0.8;
+    }
+
+    h2 {
+        background-color: black;
+        opacity: 0.8;
+        font-weight: 600;
+        text-align: center;
+        /*        text-transform: uppercase;*/
+    }
+
+    .neon {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+
+    #paracarouselheader {
+        background-color: transparent;
+        /*        opacity: 0.4;*/
+        text-align: center;
+    }
+</style>
+
+<div class="text-left">
+    <h3 class="display-4">Electronics Donation and Recycling By Deloitte</h3>
+    <hr style="height:5px;        border-width:0;        color:forestgreen;        background-color:forestgreen">
+    <p> Electronics donation and recycling is a great way to help conserve resources and natural materials. It is important to make sure you are donating and/or recycling electronics safely and correctly.</p>
+</div>
+
+<div class="container">
+    <div class="carousel slide carousel-fade" id="carouselheader" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselheader" data-slide-to="0" class="active">            </li>
+            <li data-target="#carouselheader" data-slide-to="1">            </li>
+            <li data-target="#carouselheader" data-slide-to="2">           </li>
+            <li data-target="#carouselheader" data-slide-to="3">            </li>
+        </ol>
+        <div class="carousel-inner">
+            @*<div class="carousel-item active" style="background-image: url(/img/ewaste/beaconaudio.png);  ">
+            <h2 class="neon">beacon</h2>
+            <p class="paracarouselheader">
+                Check out Deloitte's BEACON portal to tune in to podcasts about our environment...
+                <a href="https://podcasting.deloitte.com/clients/cb33ce64-33da-4a18-8758-2b7a12c73075/podcasts/22ca1d24-a88b-424d-b715-73044bb0ee64?episodeId=35d6fc07-0b8a-4c30-87e9-5c08dd58b32d" target="_blank">Read more</a>
+            </p>
+        </div>*@
+            <div class="carousel-item active" style="background-image: url('/img/ewaste/mumbai ewaste.jpg');">
+                <a href="https://indianexpress.com/article/cities/mumbai/maharashtra-recycles-only-1-of-e-waste-it-generates-mpcb-data-7265125/" target="_blank">
+                    <h2 class="neon">Case Study: Maharashtra, India(2021)</h2>
+                    @*<p class="paracarouselheader">*@
+                    @*The state generates 10 lakh tonnes of e-waste annually, but only 975.25 tonnes of it was recycled while 11,015.49 tonnes was dismantled but yet to be recycled in...
+                Read more*@
+                </a>
+                @*</p>*@
+            </div>
+
+            <div class="carousel-item" style="background-image: url(/img/ewaste/global-e-waste-management-market.png);">
+                <a href="https://www.grandviewresearch.com/industry-analysis/e-waste-management-market" target="_blank">
+                    <h2 class="neon">Global E-waste Management Market</h2>
+                    @*<p class="paracarouselheader">*@
+                </a>
+                @*</p>*@
+            </div>
+
+            <div class="carousel-item text-white" style="background-image: url(/img/ewaste/beacon2.png); ">
+                <a href="https://podcasting.deloitte.com/clients/cb33ce64-33da-4a18-8758-2b7a12c73075/podcasts/22ca1d24-a88b-424d-b715-73044bb0ee64?episodeId=35d6fc07-0b8a-4c30-87e9-5c08dd58b32d" target="_blank">
+                    <h2 class="neon">Deloitte Beacon</h2>
+                    @*<p class="paracarouselheader">Check out Deloitte's BEACON portal to tune in to podcasts about our environment...*@
+                    @*Read more*@
+                </a>
+                @*</p>*@
+            </div>
+            <div class="carousel-item text-white" style="background-image: url('/img/ewaste/protecting annex.png');">
+                <a href="https://www.who.int/globalchange/publications/factsheets/Kit2008_annex1_2.pdf?ua=1" target="_blank">
+                    <h2 class="neon">WHO - Factsheets Publications</h2>
+                    @*<p class="paracarouselheader">*@
+                    @*The state generates 10 lakh tonnes of e-waste annually, but only 975.25 tonnes of it was recycled while 11,015.49 tonnes was dismantled but yet to be recycled in...
+                Read more*@
+                </a>
+                @*</p>*@
+            </div>
+            @*<div class="carousel-item ">
+            <h2> example heading 3</h2>
+            <p class="paracarouselheader">Random textRandom textRandom textRandom textRandom textRandom textRandom textRandom textRandom textRandom text</p>
+            <a href="#" target="_blank">Read more</a>
+        </div>*@
+
+            <a class="carousel-control-prev align-content-between alert-dark" role="button" data-slide="prev" href="#carouselheader">
+                <span class="sr-only"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next align-content-between alert-dark" role="button" data-slide="next" href="#carouselheader">
+                <span class="sr-only"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm">
+    <h1>Why Donate or Recycle Electronics?</h1>
+    <hr style="height: 5px;   border-width: thin;   color: forestgreen;   background-color: orestgreen;  text-align: left;  margin-left: 0">
+    <p> Electronic products are made from valuable resources and materials, including metals, plastics, and glass, all of which require energy to mine and manufacture. Donating or recycling consumer electronics conserves our natural resources and avoids air and water pollution, as well as greenhouse gas emissions that are caused by manufacturing virgin materials. </p>
+    <h5>For example:</h5>
+    <p>Recycling one million laptops saves the energy equivalent to the electricity used by more than 3,500 US homes in a year.</p>
+    <p>For every million cell phones we recycle, 35 thousand pounds of copper, 772 pounds of silver, 75 pounds of gold and 33 pounds of palladium can be recovered.</p>
+
+    <hr />
+    <p>Here are some fun goodies we curated for the users who wish to donate.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center" id="homecard1">
+                <img src="~/img/Mockups/mug.png" class="card-img-top img-center" />
+
+                <div class="card-body">
+                    <h5 class="card-title">Cool Ceramic Mug</h5>
+                    <p class="card-text">Wake up to your morning coffee with a self appreciation for working towards sustainable living!</p>
+                    <hr />
+                    <a asp-page="WinFreebies" target="_blank">View Full</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <img src="~/img/Mockups/plantpot.png" class="card-img-top" style="height:270px;" />
+                <div class="card-body">
+                    <h5 class="card-title">Friendly Desk plant</h5>
+                    <p class="card-text">A friend on the desk to remind you that climate change is real!</p>
+                    <hr />
+                    <a asp-page="WinFreebies" target="_blank">View Full</a>
+                    @*C:\Users\randas\Documents\Book List Project\BookListRazor\BookListRazor\Pages\WorldClimate\WinFreebies.cshtml*@
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <img src="~/img/Mockups/notebook.png" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Your Sustainable Planner</h5>
+                    <p class="card-text">Keep your sustainable plans in check through this planner.</p><br />
+                    <hr />
+                    <a asp-page="WinFreebies" target="_blank">View Full</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center" id="homecard1">
+                <img src="~/img/Mockups/tback.png" class="card-img-top img-center" />
+
+                <div class="card-body">
+                    <h5 class="card-title">Awesome SUS tee</h5>
+                    <p class="card-text">Flaunt this tee shirt on your next zoom call and start a conversation on sustainability.</p>
+                    <hr />
+                    <a asp-page="WinFreebies" target="_blank">View Full</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <img src="~/img/Mockups/tfront.png" class="card-img-top" style="height:270px;" />
+                <div class="card-body">
+                    <h5 class="card-title">Awesome SUS tee(back)!</h5>
+                    <p class="card-text">Wear this Tee and flaunt your sustainability! ;)</p>
+                    <hr />
+                    <a asp-page="WinFreebies" target="_blank">View Full</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br />
+
+<div class="container">
+    We have made a fun questionnaire to check how much you know about E-waste. Are you excited? <a asp-page="Readmore" class="align-items-center  ">Know your Facts</a>
+</div>
+
+
+<br />
+<a asp-page="DonateEwaste" class="btn btn-info form-control text-white align-items-center  ">Let's Get Started</a>
+

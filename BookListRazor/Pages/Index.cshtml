@@ -1,0 +1,80 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style>
+    body {
+        background-image: url("../../img/Home/Earth/earthsafe.jpg");
+        /*        background-image: url("../../img/Home/Earth/earth1.jpg");*/
+        /*        C: \Users\randas\Documents\Book List Project\BookListRazor\BookListRazor\wwwroot\img\Home\Earth\earth1.jpg*/
+        /*        background-image: url("https://cdn.pixabay.com/photo/2019/09/24/16/05/storm-4501645_1280.jpg");*/
+        background-repeat: no-repeat, repeat;
+        background-position: center; /*center the image */
+        background-size: cover; /*resize the background image to cover the entire container */
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+/*        background-color: #010a00;*/
+/*        background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");*/
+        /*display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;*/
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        font-size: 1rem;
+    }
+    h1 {
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .neon {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+    
+</style>
+
+<div class="text-center">
+    <h1 class="neon display-4 text-monospace ">welcome to deloitte climate page</h1><br />
+</div>
+
+<div id="facilities">
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center"  id="homecard1">
+                    <img src="~/img/Logo/Logo 1.png" class="card-img-top img-center" style="transform: rotate(-20deg); height:200px; width:150px; margin-left:80px;" />
+                    <div class="card-body">
+                        <h5 class="card-title"> E-waste Donation</h5>
+                        <p class="card-text">Team HACKuna Matata's unique idea to recycle unusable electronic items in Deloitte. Be part of the solution and let's join hands in reducing our electronic waste together!</p>
+                        <hr />
+                        <a asp-page="/WorldClimate/Ewaste">LET'S DONATE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="~/img/Home/Food.jpg" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Food Analysis</h5>
+                        <p class="card-text">Know the carbon footprint associated with your food order and understand your potential and feel free to revise your order with given statistics!</p> 
+                        <hr />
+                        <a asp-page="/WorldClimate/FoodCalculator">TAKE ME WHERE THE FOOD IS!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img src="~/img/Home/Travel.jpg" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Travel Analysis</h5>
+                        <p class="card-text">Know your travel emissions as per ground transportation services. Feel free to go through alternatives with the statistics provided!</p>
+                        <hr />
+                        <a asp-page="/WorldClimate/TravelCalculator">LET'S GO!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+﻿body {
+
+}
+
+/*a {
+    color: #86bc24;
+    margin-top: 5px;
+}
+
+    a:hover {
+        color: #86bc24;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+        font-weight: 600;
+        text-decoration: none;
+    }*/
+
+.mobileewaste {
+    width: 250px;
+    height: 150px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/BLT_sandwich_with_blue_cheese.jpg');*/
+    /*background-size: cover;*/
+    background-image: url('../img/ewaste/select/smartphone.jpg');
+    z-index: 99999;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 250px 150px;
+    background-repeat: no-repeat;
+}
+.laptopewaste {
+    width: 250px;
+    height: 150px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Egg_Sandwich_001.jpg');*/
+    /*background-size: cover;*/
+    background-image: url('../img/ewaste/select/laptop.jpg');
+    z-index: 99999;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 250px 150px;
+    background-repeat: no-repeat;
+}
+
+.cheesesandwich1 {
+    width: 100%;
+    /*height: 100px;*/
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0), 0px 12px 17px rgba(0, 0, 0, 0.13);
+    position: relative;
+}
+
+.cheesesandwich2 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    line-height: 2.75;
+}
+
+/*.Quantity {
+    width: 10%;
+    margin: 30px;
+}*/
+span {
+    cursor: pointer;
+}
+
+.number {
+    /*margin: 100px;*/
+}
+
+/*.minus, .plus {
+    width: 20px;
+    height: 20px;
+    background: #212529;
+    border-radius: 4px;
+    padding: 8px 5px 8px 5px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+*/
+input {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 19px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.meal {
+    margin: 50px 0px 0px 0px;
+}
+
+.glyphico {
+    /*color: #0F0B0B;*/
+    color: white;
+}
+
+.stone {
+    margin-top: 13%;
+}
+
+.stone1 {
+    margin-top: 10%;
+}
+
+.stone2 {
+    margin-top: 25%;
+}
+
+.btnm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    /*background-color: #555;*/
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    /*cursor: pointer;*/
+    border-radius: 5px;
+}
+
+.img-overlay {
+    position: absolute;
+    /*    top: 0;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+    .img-overlay:before {
+        content: ' ';
+        display: block;
+        /*adjust: 'height' to position overlay content vertically */
+        height: 50%;
+    }

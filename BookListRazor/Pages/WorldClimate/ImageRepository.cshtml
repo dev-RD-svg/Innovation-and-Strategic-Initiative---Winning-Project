@@ -1,0 +1,59 @@
+﻿@page
+@*@model BookListRazor.Model.ImageRepository*@
+@*@model BookListRazor.Pages.BookList.ImageRepositoryModel*@
+@*@model ImageRepositoryModel*@
+@model BookListRazor.Pages.BookList.ImageRepositoryModel
+
+
+<h3 class="text-info">Image Repository</h3>
+<br />
+
+<div class=" border container" style="padding: 30px">
+    <div class="display-4">
+        <table>
+            @*<thead>
+                    <tr><th></th></tr>
+                    <tr><th></th></tr>
+                    <tr><th></th></tr>
+                </thead>*@
+            <tbody>
+                <tr>
+                    <td><img src="~/img/FoodPieChart/1-CheeseSandwich.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/2-EggRice.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/3-ChickenSandwich.png" style="height: 250px; width: 350px " /></td>
+                </tr>
+                <tr>
+                    <td><img src="~/img/FoodPieChart/4-EggCheeseSandwich.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/5-ChickenCheeseSandwich.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/6-VegRice.png" style="height: 250px; width: 350px " /></td>
+                </tr>
+                <tr>
+                    <td><img src="~/img/FoodPieChart/7-ChickenSoup.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/8-ChickenSteakInRedWine.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/9-Milk.png" style="height: 250px; width: 350px " /></td>
+                </tr>
+                <tr>
+                    <td><img src="~/img/FoodPieChart/7-ChickenSoup.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/8-ChickenSteakInRedWine.png" style="height: 250px; width: 350px " /></td>
+                    <td><img src="~/img/FoodPieChart/9-Milk.png" style="height: 250px; width: 350px " /></td>
+                </tr>
+                <tr><td></td></tr>
+                @*<tr><td></td></tr>*@
+                @*<tr><td></td></tr>
+                    <tr><td></td></tr>*@
+            </tbody>
+        </table>
+        @*<img src="~/img/1-CheeseSandwich.png" style="height: 250px; width: 350px" /> workssss
+        <img src="~/img/Photos/1-CheeseSandwich.png" style="height: 250px; width: 350px " /> workssss
+        <img src="~/img/Photos/1-CheeseSandwich.png" style="height: 250px; width: 350px " /> workssss*@
+    </div>
+
+    <div class="form-group row">
+        <div class="col-3">
+            <a asp-page="Index" class="btn btn-success form-control">Back</a> @*text-white*@
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <partial FName="_ValidationScriptsPartial" />
+}

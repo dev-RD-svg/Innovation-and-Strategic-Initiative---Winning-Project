@@ -1,0 +1,63 @@
+﻿@page
+@*@model BookListRazor.Pages.FoodCalculatorModel*@
+<style>
+    body {
+        background-image: url("../../img/Deloitte/infrastructure/DEB_8923.jpg");
+        background-repeat: no-repeat, repeat;
+        background-position: center; /* Center the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        /*    padding-top: 50px;*/
+    }
+
+    h1 {
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .neon {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+</style>
+
+
+<h1 class="neon text-white">You deserve the best</h1>
+<br />
+
+<div class=" container" style="padding: 30px">
+    <div class="display-4">
+        <table style="">
+            @*<thead>
+                    <tr><th></th></tr>
+                    <tr><th></th></tr>
+                    <tr><th></th></tr>
+                </thead>*@
+            <tbody>
+                <tr>
+                    <td><img src="~/img/Mockups/mug.png" style="height: 450px; width: 550px " /></td>
+                    <td><img src="~/img/Mockups/plantpot.png" style="height: 450px; width: 550px " /></td>
+                    </tr>
+                <tr>
+                    <td><img src="~/img/Mockups/tfront.png" style="height: 450px; width: 550px " /></td>
+                    <td><img src="~/img/Mockups/tback.png" style="height: 450px; width: 550px " /></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td><img src="~/img/Mockups/notebook.png" style="height: 450px; width: 550px " /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-3 offset-9">
+            <a asp-page="/WorldClimate/Ewaste" class="btn btn-success form-control">Back</a>
+        </div>
+    </div>
+</div>
+
